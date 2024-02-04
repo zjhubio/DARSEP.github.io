@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>webapp</title>
+  <style>
+    body div {
+      margin-bottom: 30px;
+ 
+    }
+ 
+    .wallet, .interact_to_contract{
+      width: 450px;
+      margin-top: 30px;
+ 
+    }
+    .wallet button{
+      width: 100%;
+    }
+ 
+ 
+    .dogreet{
+      width: 100%;
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="wallet">
+    <button onclick="connect_to_metamask()">连接metamask钱包</button><br /><br>
+    账户地址：<span id="txt_curent_addr"></span><br /><br>
+    账户余额：<span id="txt_balance"></span><br />
+  </div>
+  <hr style="border:solid #987cb9;" width="100%">
+ 
+  <div class="interact_to_contract">
+    <button onclick="doGreet()" class="dogreet">Greeter合约greet函数</button><br /><br>
+    <input id="input_greeting"><button onclick="doSetGreeting()">Greeter合约setGreeting</button><br/><br>
+ 
+    <span id="txt_greet_log"></span>
+  </div>
+  
+  <hr style="border:solid #987cb9;" width="100%">
+ 
+  <div class="wallet">
+    <button onclick="connect()">连接metamask钱包（优化）</button><br /><br>
+  </div>
+  
+  <hr style="border:solid #987cb9;" width="100%">
+  
+    <div class="wallet">
+    <button onclick="connectipfs()">连接IPFS</button><br /><br>
+  </div>
+  
+  <hr style="border:solid #987cb9;" width="100%">
+
+	<h2>上传文件</h2>
+    <input type="file" id="file"><br>
+	<button id = 'btn' onclick='saveToIpfs()'>提交</button>
+	<h4 class="imageuri"> </h4>
+	
+  <hr style="border:solid #987cb9;" width="100%">
+	
+	<h2>铸币</h2>
+	题目：<input type="text" class="name"><br>
+	描述：<textarea class="description"></textarea>
+	<input type="file" id="imgfile"><br>
+	<button class = 'btn' onclick='mint()'>提交</button>
+	
+  <hr style="border:solid #987cb9;" width="100%">
+  
+	<h2>我的NFT</h2>
+	<button class = 'btn' onclick='ownNFT()'>查看</button>
+	
+  <hr style="border:solid #987cb9;" width="100%">
+	<h2>创建钱包</h2>
+	<button class = 'btn' onclick='createWallet()'>创建钱包</button>
+
+  <hr style="border:solid #987cb9;" width="100%">
+	<h2>所有权转移</h2>
+	拥有者：<input type="text" class="from"><br>
+	转移给：<input type="text" class="to"><br>
+	tokenId：<input type="text" class="tokenId"><br>
+	<button id = 'btn' onclick='safeTransferFrom()'>转移</button>
+	
+  <hr style="border:solid #987cb9;" width="100%">
+	<h2>销毁</h2>
+	tokenId：<input type="text" class="burnTokenId"><br>
+	<button id = 'btn' onclick='burnToken()'>转移</button>
+	
+  <hr style="border:solid #987cb9;" width="100%">
+	<h2>LeanCloud存储</h2>
+        <label for="">姓名：</label>
+        <input type="text" name="name" class="leanname">
+        <label for="">内容：</label>
+        <input type="text" name="content" class="leancontent">
+        <input type="submit" value="提交" onclick='asupabase()'>
+    
+</section>
+</body>
+ 
+</html>
+
+<script src="https://cdn.jsdelivr.net/gh/iGaoWei/Dream-Msg/lib/dream-msg.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/ipfs-http-client/dist/index.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+<script src="./connection-service.js" type="text/javascript"></script>
+<script>
+	let ipfs = null;
+	
+	async function connect_to_metamask() {
+		const provider = new ethers.providers.Web3Provider(window.ethereum)
+		const accounts = await provider.send("eth_requestAccounts", []);
+		const signer = provider.getSigner()
+		
+		if (accounts && accounts.length > 0) {
+			let myAccountAddr = accounts[0];
+			let balance = ethers.utils.formatEther(await provider.getBalance(myAccountAddr));
+			let network = await provider.getNetwork();
+ 
+			//显示在界面上；
+			document.getElementById('txt_curent_addr').innerText = myAccountAddr;
+			document.getElementById('txt_balance').innerText = balance;
+ 
+			console.log("当前账户地址：", myAccountAddr);
+			console.log("金额：", balance);
+			console.log("Chain Info;", network.chainId, network.name);
+		}
+
+
+	}
+	
+	async function connectipfs() {
+		
+		ipfs = window.IpfsHttpClient.create("/ip4/127.0.0.1/tcp/5001");
+		
+		const data = {name:"test"};
+		const dataJson = JSON.stringify(data);
+		
+		try{
+			const added = await ipfs.add(dataJson);
+			console.log(added);
+		} catch (err) {
+			console.error(err);
+      }
+	}
+	
+	async function saveToIpfs() {
+		file = document.getElementById("imgfile").files[0];
+		
+		try{
+			const added = await ipfs.add(file);
+			const cid = added.path;
+			const rst = "http://127.0.0.1:8080/ipfs/" + cid;
+			document.getElementsByClassName('imageuri')[0].innerHTML = 'ImageUri:' + rst;
+			return rst;
+		} catch (err) {
+			console.error(err);
+      }
+	}
+	
+	async function addToIPFS(NftMetaJson){
+		const added = await ipfs.add(NftMetaJson);
+		const cid = added.path;
+		const rst = "http://127.0.0.1:8080/ipfs/" + cid;
+		return rst;
+	}
+	
+	async function getNFTAbiJson(path) {
+		try {
+			let response = await fetch(path);
+			let data = await response.json();
+			return data;
+		} catch (error) {
+			console.error('Error fetching JSON:', error);
+		}
+	}
+	
+	async function mint(){
+		name = document.getElementsByClassName('name')[0].value;
+		description = document.getElementsByClassName('description')[0].value;
+		const imageUri = await saveToIpfs();
+		const NftMeta = {name:name, description:description, imageUri:imageUri};
+		const NftMetaJson = JSON.stringify(NftMeta);
+		const tokenUri = await addToIPFS(NftMetaJson);
+		
+		const { success, provider, signer } = await trying();
+		const nftAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+		const nftAbi = await getNFTAbiJson('./ArtistNFT.json');
+		
+		let nft = new ethers.Contract(nftAddress,nftAbi.abi,signer);
+		const address = await signer.getAddress();
+		await signer.sendTransaction({to: nftAddress,value: ethers.utils.parseUnits('1000', 'gwei')});
+		
+		let transaction = await nft.safeMint(address, tokenUri,nftAddress);
+		let tx = await transaction.wait(1);
+		let event = tx.events[0];
+		let value = event.args[2];
+		let tokenId = value.toNumber();
+		console.log(tokenId);
+		//let event = tx.events[0];
+		//let value = event.args[2];
+	}
+	
+	async function ownNFT(){
+		const { success, provider, signer } = await trying();
+		const address = await signer?.getAddress();
+		const nftAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+		const nftAbi = await getNFTAbiJson('./ArtistNFT.json');
+		
+		let nft = new ethers.Contract(nftAddress,nftAbi.abi,signer);
+		const count = await nft.balanceOf(address);
+		const amount = count.toNumber();
+		
+		var nfts = [];
+		for (let i = 0; i < amount; i++){
+			const tokenId = await nft.tokenOfOwnerByIndex(address, i);
+			const tokenUri = await nft.tokenURI(tokenId);
+			const data = await axios.get(tokenUri);
+			const metadata = data.data;
+			metadata["tokenId"] = tokenId.toNumber();
+			console.log(metadata);
+		}
+	}
+	
+	async function createWallet(){
+		const provider = new ethers.providers.Web3Provider(window.ethereum);
+		let w = ethers.Wallet.createRandom(provider);
+		console.log("privateKey:", w.privateKey)  //私钥
+		console.log("address:", w.address)  //地址
+		console.log("phrase:", w.mnemonic?.phrase)  //助记词
+	}
+	
+	async function safeTransferFrom(){
+		from = document.getElementsByClassName('from')[0].value;
+		to = document.getElementsByClassName('to')[0].value;
+		tokenId = document.getElementsByClassName('tokenId')[0].value;
+		
+		const { success, provider, signer } = await trying();
+		const nftAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+		const nftAbi = await getNFTAbiJson('./ArtistNFT.json');
+		
+		let nft = new ethers.Contract(nftAddress,nftAbi.abi,signer);
+		let transaction = await nft["safeTransferFrom(address,address,uint256)"](from, to, tokenId);
+		let tx = await transaction.wait(1);
+		console.log(tx);
+	}
+	
+	async function burnToken(){
+		tokenId = document.getElementsByClassName('burnTokenId')[0].value;
+		const { success, provider, signer } = await trying();
+		const nftAddress = "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0";
+		const nftAbi = await getNFTAbiJson('./ArtistNFT.json');
+		let nft = new ethers.Contract(nftAddress,nftAbi.abi,signer);
+		
+		const address = await signer?.getAddress();
+		const tokenUri = await nft.tokenURI(tokenId);
+		const data = await axios.get(tokenUri);
+		const imageUri = data.data.imageUri;
+		const hash_1 = tokenUri.split("/").pop();
+		const hash_2 = imageUri.split("/").pop();
+		await ipfs.pin.rm(hash_1);
+		await ipfs.pin.rm(hash_2);
+
+		let transaction = await nft["burn(uint256)"](tokenId);
+		let tx = await transaction.wait(1);
+		console.log(tx);
+	}
+	
+	async function asupabase(){
+		name = document.getElementsByClassName('leanname')[0].value;
+		content = document.getElementsByClassName('leancontent')[0].value;
+		
+		const { createClient } = supabase
+		
+		const connector = createClient("https://ppjwxylcoccynhfyybdp.supabase.co","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBwand4eWxjb2NjeW5oZnl5YmRwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY4NDY2MzQsImV4cCI6MjAyMjQyMjYzNH0.gxtgqJ7NjyPEGdLXV_zml-M_mX_2qP-5eAztVhr8EmM");
+		//const { data, error } = await connector.from('userdemo').insert({id:3,name:'dinner'})
+		let { data, error } = await connector.from('userdemo').select('*');
+		console.log(data)
+	}
+
+</script>
+
+
+		
