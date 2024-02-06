@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Eskimo - HTML Template</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<style>
+		/* 设置包含图片和注释的容器的样式 */
+		.image-container {
+		  display: flex;
+		  flex-direction: column;
+		  align-items: center; /* 居中对齐 */
+		  text-align: center; /* 文本居中对齐 */
+		}
+
+		/* 设置图片的样式 */
+		.image-container img {
+		  width: 48%;
+		  max-width: 100%;
+		  height: auto;
+		  margin-bottom: 10px; /* 图片与注释之间的间距 */
+		}
+  </style>
+</head>
+
+<body>
+    <!-- READING POSITION INDICATOR -->
+    <progress value="0" id="eskimo-progress-bar">
+        <span class="eskimo-progress-container">
+            <span class="eskimo-progress-bar"></span>
+        </span>
+    </progress>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <!-- SIDEBAR -->
+                <div id="eskimo-sidebar">
+                    <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+                        <!-- LOGO -->
+                        <div id="eskimo-logo-cell" class="w-100">
+                            <a class="eskimo-logo-link" href="index.html">
+                                <img src="images/logo.png" class="eskimo-logo" alt="eskimo" />
+                            </a>
+                        </div>
+                        <!-- MENU CONTAINER -->
+                        <div id="eskimo-sidebar-cell" class="w-100">
+                            <!-- MOBILE MENU BUTTON -->
+                            <div id="eskimo-menu-toggle">MENU</div>
+                            <!-- MENU -->
+                            <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                                <ul class="eskimo-menu-ul">
+                                    <li><a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="./data.html">Data Analysis</a>
+                                    </li>
+                                    <li><a href="#">Model Analysis</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="fitness.html">Fitenss</a></li>
+                                            <li><a href="model.html">Model</a></li>
+                                            <li><a href="downstream.html">Analysis</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="aboutus.html">About Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- SOCIAL MEDIA ICONS -->
+    
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- PAGE TITLE -->
+                <div class="eskimo-page-title">
+                    <h1><span>Downstream Task Analysis</span></h1>
+                    <p class="eskimo-page-subtitle">Fitness Calculation(FC), Clustering Analysis(CA), Constructing Evolutionary Fields(CEF), Prediction of Missense Variant Effects(PMVE), VOCs Analysis(VA)</p>
+                </div>
+ 
+                <ul class="nav nav-tabs">
+                    <!-- TAB 1 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#mp-tab-1" aria-expanded="true">
+                            <i class="fa fa-microphone"></i> FC
+                        </a>
+                    </li>
+                    <!-- TAB 2 -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-2" aria-expanded="false">
+                            <i class="fa fa-rocket"></i> CA
+                        </a>
+                    </li>
+                    <!-- TAB 3 -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-3" aria-expanded="false">
+                            <i class="fa fa-android"></i> CEF
+                        </a>
+                    </li>
+					
+					<li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-4" aria-expanded="false">
+                            <i class="fa fa-android"></i> PMVE
+                        </a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#mp-tab-5" aria-expanded="false">
+                            <i class="fa fa-android"></i> VA
+                        </a>
+                    </li>
+                </ul>
+                <!-- TABS CONTENT -->
+                <div class="eskimo-tabs-content tab-content">
+                    <!-- TAB 1 -->
+                    <div class="tab-pane fade active show" id="mp-tab-1" role="button" aria-expanded="true">
+                        <h3>Fitness Calculation</h3>
+                        <p>Enter the RBD amino acid sequence in the input box below and calculate the sequence fitness.</p>
+						<p><textarea id="rbdsequence" name="rbdsequence" cols="45" rows="8" required="required"></textarea></p>
+						<input type="submit" value="Submit" onclick='calculateFitness()'/>
+						<div id="fitnessresults" style="margin-top:5%;display:none">
+							<h4>Results</h4>
+							<p id="stability">Stability Score: 0</p>
+							<p id="ACE2">ACE2 Score: 0</p>
+							<p id="nABs">nABs Score: 0</p>
+							<p id="Fitnessscore">Fitness Score: 0</p>
+						</div>
+                    </div>
+                    <!-- TAB 2 -->
+                    <div class="tab-pane fade " id="mp-tab-2" role="button" aria-expanded="false">
+                        <h3>Clustering Analysis</h3>
+                        <p>Cluster analysis is performed based on the dataset provided in the drop-down box.</p>
+                        <select id="trainingset">
+							<option value="1">trainingdataset</option>
+							<option value="2">trainingdataset+optimised dataset</option>
+						</select>
+						<div style="margin-top:3%">
+							<input type="submit" value="Submit" onclick='cluster()'/>
+						</div>
+						<div class="image-container" id="clusterimgs" style="margin-top:5%;display:none">
+							<img id="img1" src="" alt="Image 1">
+							<p id="annotation1">注释 1</p>
+							<img id="img2" src="" alt="Image 2">
+							<p id="annotation2">注释 2</p>
+						</div>
+						
+						
+                    </div>
+                    <!-- TAB 3 -->
+                    <div class="tab-pane fade " id="mp-tab-3" role="button" aria-expanded="false">
+                        <h3>Constructing Evolutionary Fields</h3>
+                        <p>Constructing Evolutionary Fields are performed based on the dataset provided in the drop-down box.</p>
+                        <select id="trainingdataset">
+							<option value="3">trainingdataset</option>
+							<option value="4">trainingdataset+optimised dataset</option>
+						</select>
+						<div style="margin-top:3%">
+							<input type="submit" value="Submit" onclick='evo()'/>
+						</div>
+						<div class="image-container" id="evoimgs" style="margin-top:5%;display:none">
+							<img id="img3" src="" alt="Image 3">
+							<p id="annotation3">注释 1</p>
+							<img id="img4" src="" alt="Image 4">
+							<p id="annotation4">注释 2</p>
+							<img id="img5" src="" alt="Image 5">
+							<p id="annotation5">注释 3</p>
+						</div>
+                    </div>
+					
+					<div class="tab-pane fade " id="mp-tab-4" role="button" aria-expanded="false">
+                        <h3>Prediction of Missense Variant Effects</h3>
+                        <p>Calculate the score of site missense mutations in RBD sequences.</p>
+						<p><textarea id="rbdsequence_" name="rbdsequence" cols="45" rows="5" readonly></textarea></p>
+						<input type="submit" value="Submit" onclick='score()'/>
+						<div id="scorereuslts" style="margin-top:5%;display:none">
+							<h4>Download Link:</h4><a>https://github.com/zjhubio/DARSEP/blob/main/results/score.csv</a>
+						</div>
+                    </div>
+					<div class="tab-pane fade " id="mp-tab-5" role="button" aria-expanded="false">
+                        <h3>VOCs Analysis</h3>
+						<p>Semantic syntax analysis of Variant of Concern</p>
+						<select id="vocs">
+							<option value="5">Omicron BA.1</option>
+							<option value="6">Omicron EG.5</option>
+						</select>
+						<div style="margin-top:3%">
+							<input type="submit" value="Submit" onclick='vocsanalysis()'/>
+						</div>
+						<div class="image-container" id="vocimgs" style="margin-top:5%;display:none">
+							<img id="img6" src="" alt="Image 6">
+							<p id="annotation6">注释 1</p>
+							<img id="img7" src="" alt="Image 7">
+							<p id="annotation7">注释 2</p>
+							<img id="img8" src="" alt="Image 8">
+							<p id="annotation8">注释 3</p>
+						</div>
+                    </div>
+                </div>
+
+               
+                <!-- DIVIDER -->
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer id="eskimo-footer">
+            <div class="container">
+                <!-- CREDITS -->
+                <div class="eskimo-footer-credits">
+                    <p>
+                        DARSEP</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- GO TO TOP BUTTON -->
+    <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- SLIDE PANEL OVERLAY -->
+    <div id="eskimo-overlay"></div>
+    <!-- FULLSCREEN SEARCH -->
+
+    <!-- JS FILES -->
+	<script src="https://gosspublic.alicdn.com/aliyun-oss-sdk-6.18.0.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/reading-position-indicator.js"></script>
+    <script src="js/custom.js"></script>
+	<script src="js/fitness.js"></script>
+	<script src="js/cluster.js"></script>
+	<script src="js/evo.js"></script>
+	<script src="js/score.js"></script>
+	<script src="js/vocsanalysis.js"></script>
+	<script>
+	</script>
+</body>
+
+</html>
