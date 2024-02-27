@@ -124,6 +124,8 @@
                         <p>Enter the RBD amino acid sequence in the input box below and calculate the sequence fitness.</p>
 						<p><textarea id="rbdsequence" name="rbdsequence" cols="45" rows="8" required="required"></textarea></p>
 						<input type="submit" value="Submit" onclick='calculateFitness()'/>
+			    			<input type="submit" value="clear " onclick='cleartext()'/>
+						<input type="submit" value="reset " onclick='resets()'/>
 						<div id="fitnessresults" style="margin-top:5%;display:none">
 							<h4>Results</h4>
 							<p id="stability">Stability Score: 0</p>
