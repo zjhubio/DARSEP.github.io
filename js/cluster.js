@@ -8,8 +8,6 @@ async function cluster(){
 	
 	const client = new OSS({
        region: 'oss-cn-beijing',
-       accessKeyId: 'LTAI5t5i8dSnEmqkzeZD26Vb',
-       accessKeySecret: '4rJ7ryao3M1nn1fgJddNKFi7RxIzbM',
        bucket: "darsep",
     });
 	
