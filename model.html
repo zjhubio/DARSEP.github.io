@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>DARSEP</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="js/echarts.min.js"></script>
+</head>
+
+<body>
+    <!-- READING POSITION INDICATOR -->
+    <progress value="0" id="eskimo-progress-bar">
+        <span class="eskimo-progress-container">
+            <span class="eskimo-progress-bar"></span>
+        </span>
+    </progress>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <!-- SIDEBAR -->
+                <div id="eskimo-sidebar">
+                    <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+                        <!-- LOGO -->
+                        <div id="eskimo-logo-cell" class="w-100">
+                            <a class="eskimo-logo-link" href="index.html">
+                                <img src="images/logo.png" class="eskimo-logo" alt="eskimo" />
+                            </a>
+                        </div>
+                        <!-- MENU CONTAINER -->
+                        <div id="eskimo-sidebar-cell" class="w-100">
+                            <!-- MOBILE MENU BUTTON -->
+                            <div id="eskimo-menu-toggle">MENU</div>
+                            <!-- MENU -->
+                            <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                                <ul class="eskimo-menu-ul">
+                                    <li><a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="./data.html">Data Analysis</a>
+                                    </li>
+                                    <li><a href="#">Model Analysis</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="fitness.html">Fitness</a></li>
+                                            <li><a href="model.html">Model</a></li>
+                                        </ul>
+                                    </li>
+									<li><a href="downstream.html">DOWNSTREAM Analysis</a></li>
+									<li><a href="install.html">Local Installation & Usage</a></li>
+                                    <li><a href="contactus.html">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- SOCIAL MEDIA ICONS -->
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- PAGE TITLE -->
+                <div class="eskimo-page-title">
+                    <h1><span>Model Training Results</span></h1>
+                    <p class="eskimo-page-subtitle">The training results of DAESP-SPRLM and DAESEP-PMLM</p>
+                </div>
+                <!-- BLOG POSTS -->
+                <div class="eskimo-masonry-grid">
+                    <div class="eskimo-two-columns" data-columns>
+                        <!-- POST 1 -->
+                        <div class="card-masonry">
+                            <div class="card">
+                                <a href="" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+                                    <img class="card-vertical-img" src="images/model1.png" alt="Ketchup Flavored Ice Cream!" />   
+                                </a>
+                                <div class="card-border">
+                                    <div class="card-body">
+                                        <div class="card-category">
+                                            <span><a href="">DARSEP-SPRLM</a></span>
+                                        </div>
+                                        <h3 class="card-title">
+                                            <a href="">Comparison of Prediction Structures</a>
+                                        </h3>
+                                        <p style="text-align:justify">3D structure of one of the sequences in the set of optimised sequences of the RBD. 3D structure of the wild-type sequences.3D structure of the most similar sequences in the multiple sequence comparison.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- POST 2 -->
+                        <div class="card-masonry">
+                            <div class="card">
+                                <a href="" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+                                    <img class="card-vertical-img" src="images/model2.png" alt="Best Breakfast In The World" />   
+                                </a>
+                                <div class="card-border">
+                                    <div class="card-body">
+                                        <div class="card-category">
+                                            <span><a href="">DARSEP-SPRLM</a></span>
+                                        </div>
+                                        <h3 class="card-title">
+                                            <a href="">Regression Analysis</a>
+											<a href="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                        </h3>
+                                        <p style="text-align:justify">Regression correlation between the predicted fitness of the model for the generated optimised sequences and the predicted fitness calculated after generating the sequence.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- POST 3 -->
+                        <div class="card-masonry">
+                            <div class="card">
+                                <a href="" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+                                    <img class="card-vertical-img" src="images/model3.png" alt="Best and Worst Summer Foods" />   
+                                </a>
+                                <div class="card-border">
+                                    <div class="card-body">
+                                        <div class="card-category">
+                                            <span><a href="">DARSEP-SPRLM</a></span>
+                                        </div>
+                                        <h3 class="card-title"><a href="">List and Proof of Some Mutations</a></h3>
+                                        <p>The table above provides detailed information on some of these mutation sites, demonstrating our model's ability to predict new mutated sequences.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- POST 8 -->
+                        <div class="card-masonry">
+                            <div class="card">
+                                <div id="pic1" style="width:100%;height:350px;border: 1px solid rgba(0, 0, 0, 0.1);"></div>  
+                                <div class="card-border">
+                                    <div class="card-body">
+                                        <div class="card-category">
+                                            <span><a href="">DARSEP-PMLM</a></span>
+                                        </div>
+                                         <h3 class="card-title">
+                                             <a href="single-post.html">Experiments Comparing DARSEP with Other Models</a>
+                                        </h3>
+                                        <p>Comparison of the performance of different models for amino acid sequence mask training, including serial vs. parallel for DARSEP internal modules and other models.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-masonry">
+                            <div class="card">
+                                <div id="pic2" style="width:100%;height:350px;border: 1px solid rgba(0, 0, 0, 0.1);"></div> 
+                                <div class="card-border">
+                                    <div class="card-body">
+                                        <div class="card-category">
+                                            <span><a href="">DARSEP-PMLM</a></span>
+                                        </div>
+                                         <h3 class="card-title">
+                                             <a href="">Ablation Experiment</a>
+                                        </h3>
+                                        <p>Ablation experiment, where ESM2 is indicative of the DARSEP model without RetNet and RetNet is indicative of the DARSEP model without ESM2.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+         <footer id="eskimo-footer">
+            <div class="container">
+                <!-- CREDITS -->
+                <div class="eskimo-footer-credits">
+                    <p>
+                        DARSEP</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- GO TO TOP BUTTON -->
+    <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- SLIDE PANEL OVERLAY -->
+    <div id="eskimo-overlay"></div>
+    <!-- SLIDE PANEL -->
+
+    <!-- JS FILES -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/salvattore.min.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/reading-position-indicator.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+<script>
+	var pic1 = echarts.init(document.getElementById('pic1'));
+	var pic2 = echarts.init(document.getElementById('pic2'));
+	
+	
+	var option1 ={
+  legend: {},
+  tooltip: {},
+  grid: {
+				top: '25%',
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+  dataset: {
+    dimensions: ['index', 'DARSEP', 'Sars-escape network', 'Flowformer', 'AminoBert', 'gMLP','CSCS','GPT2'],
+    source: [
+      { index: 'Accuracy', 'DARSEP': 0.9814, 'Sars-escape network': 0.9784, 'Flowformer': 0.9742  ,'AminoBert': 0.9738,'gMLP':0.9716,'CSCS':0.9707,'GPT2':0.9661},
+      { index: 'Precision', 'DARSEP': 0.9798, 'Sars-escape network': 0.9757, 'Flowformer': 0.9657  ,'AminoBert': 0.9649,'gMLP':0.9676,'CSCS':0.9649,'GPT2':0.9551},
+      { index: 'Recall', 'DARSEP': 0.9814, 'Sars-escape network': 0.9784, 'Flowformer': 0.9742  ,'AminoBert': 0.9738,'gMLP':0.9716,'CSCS':0.9707,'GPT2':0.9661},
+      { index: 'F1-score', 'DARSEP': 0.9803, 'Sars-escape network': 0.9790, 'Flowformer': 0.9690  ,'AminoBert': 0.9683,'gMLP':0.9668,'CSCS':0.9662,'GPT2':0.9601}
+    ]
+  },
+  xAxis: { type: 'category' },
+  yAxis: {min:0.95},
+  // Declare several bar series, each will be mapped
+  // to a column of dataset.source by default.
+  series: [{ type: 'bar' }, { type: 'bar' }, { type: 'bar' }, { type: 'bar' }, { type: 'bar' }, { type: 'bar' }, { type: 'bar' }]
+};
+
+var option2 = {
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  legend: {},
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  xAxis: {
+    type: 'value',
+    boundaryGap: [0, 0.01],
+    min: 0.96
+  },
+  yAxis: {
+    type: 'category',
+    data: ['RetNet', 'ESM2', 'DARSEP(serial)', 'DARSEP(ours,parallel)']
+  },
+  series: [
+    {
+      name: 'Accuracy',
+      type: 'bar',
+      data: [0.9755, 0.9795, 0.9791, 0.9809]
+    },
+    {
+      name: 'Precision',
+      type: 'bar',
+      data: [0.971, 0.9776, 0.9772, 0.979]
+    },
+    {
+      name: 'Recall',
+      type: 'bar',
+      data: [0.9755, 0.9755, 0.9791, 0.9809]
+    },
+    {
+      name: 'F1-score',
+      type: 'bar',
+      data: [0.971, 0.9774, 0.9762, 0.9797]
+    }
+  ]
+};
+
+pic1.setOption(option1);
+pic2.setOption(option2);
+</script>
+
+</html>

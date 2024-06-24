@@ -1,0 +1,1069 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>DARSEP</title>
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- CSS FILES -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/fontawesome.css" rel="stylesheet" type="text/css">
+  <link href="css/featherlight.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/echarts.min.js"></script>
+</head>
+
+<body>
+  <!-- READING POSITION INDICATOR -->
+  <progress value="0" id="eskimo-progress-bar">
+    <span class="eskimo-progress-container">
+      <span class="eskimo-progress-bar"></span>
+    </span>
+  </progress>
+  <!-- SITE WRAPPER -->
+  <div id="eskimo-site-wrapper">
+    <!-- MAIN CONTAINER -->
+    <main id="eskimo-main-container">
+      <div class="container">
+        <!-- SIDEBAR -->
+        <div id="eskimo-sidebar">
+          <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+            <!-- LOGO -->
+            <div id="eskimo-logo-cell" class="w-100">
+              <a class="eskimo-logo-link" href="index.html">
+                <img src="images/logo.png" class="eskimo-logo" alt="eskimo" />
+              </a>
+            </div>
+            <!-- MENU CONTAINER -->
+            <div id="eskimo-sidebar-cell" class="w-100">
+              <!-- MOBILE MENU BUTTON -->
+              <div id="eskimo-menu-toggle">MENU</div>
+              <!-- MENU -->
+              <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                <ul class="eskimo-menu-ul">
+                  <li><a href="index.html">Home</a>
+                  </li>
+                  <li><a href="./data.html">Data Analysis</a>
+                  </li>
+                  <li><a href="#">Model Analysis</a>
+                    <ul class="sub-menu">
+                      <li><a href="fitness.html">Fitness</a></li>
+                      <li><a href="model.html">Model</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="downstream.html">Downstream Analysis</a></li>
+				  <li><a href="install.html">Local Installation & Usage</a></li>
+                  <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- PAGE TITLE -->
+        <div class="eskimo-page-title">
+          <h1><span>Data Analysis</span></h1>
+          <p class="eskimo-page-subtitle">SARS-CoV-2 Spike Protein Information from 2019-2023 in GISAID</p>
+        </div>
+        <h2> Statistics on virus sequence mutations </h2>
+        <p style="text-align:justify">The rectangular tree chart shows the proportion of variation in each continent,
+          with Oceania accounting for 1.62% and Africa accounting for 0.98%. The word cloud map is a spectrum of virus
+          mutations. The line chart shows the variation of the number of virus sequences across different continents
+          over time.</p>
+        <!-- IMAGE GALLERY -->
+        <div class="eskimo-masonry-grid eskimo-gallery">
+          <div class="eskimo-two-columns" data-columns>
+            <!-- GALLERY ITEM 1 -->
+            <div class="eskimo-gallery-item" id="pic1" style="width: 600px;height:400px;"></div>
+            <!-- GALLERY ITEM 2 -->
+            <div class="eskimo-gallery-item">
+              <a href="#" data-featherlight="images/img2.png" class="eskimo-lightbox">
+                <img src="images/img2.png" style="margin-top: 35px;" alt="" />
+              </a>
+            </div>
+            <!-- GALLERY ITEM 1 -->
+            <div class="eskimo-gallery-item" id="pic3" style="width: 600px;height:400px;margin-top:5%">
+            </div>
+            <!-- GALLERY ITEM 1 -->
+            <div class="eskimo-gallery-item" id="pic4" style="width: 600px;height:400px;margin-top:8%">
+            </div>
+          </div>
+        </div>
+        <!-- DIVIDER -->
+        <hr />
+        <h2>The proportion of virus mutations in major countries on various continents</h2>
+        <p>The proportion of virus mutations in major countries in Asia, North America, and Europe.</p>
+        <!-- IMAGE GALLERY -->
+        <div class="eskimo-masonry-grid eskimo-gallery">
+          
+            <!-- GALLERY ITEM 1 -->
+            <div id="map1" style="width:33.3%;height:400px">
+              
+            </div>
+            <!-- GALLERY ITEM 2 -->
+            <div id="map2" style="width:33.3%;height:400px">
+              
+            </div>
+            <!-- GALLERY ITEM 3 -->
+            <div id="map3" style="width:32%;height:400px">
+              
+            </div>
+          
+        </div>
+        <!-- DIVIDER -->
+        <hr />
+
+
+        <h2>Variation Frequency </h2>
+        <p>Thermogram of the variation frequency of important mutation sites in SARS-CoV-2 spike protein in major
+          strains.</p>
+        <!-- IMAGE GALLERY -->
+        <div class="eskimo-masonry-grid eskimo-gallery">
+          
+            <div id="heatmap" style="width:100%;height:400px">
+              
+            </div>
+
+          
+        </div>
+        <!-- DIVIDER -->
+        <hr />
+
+        <h2> Statistics on relevant information of SARS-CoV-2 pangolin data </h2>
+        <p style="text-align:justify">Scatter plot of the number of RBD sequence mutation sites in the main lineage of
+          SARS-CoV-2 over time, with the horizontal axis representing the number of days from the start time of
+          2019-12-01. The phylogenetic tree of SARS-CoV-2. Statistics on the proportion changes of variants in each
+          lineage of SARS-CoV-2 every month.</p>
+        <!-- IMAGE GALLERY -->
+        <div class="eskimo-masonry-grid eskimo-gallery">
+       
+            <!-- GALLERY ITEM 1 -->
+            <div class="eskimo-gallery-item" style="width:44%">
+              <a href="#" data-featherlight="images/img10.png" class="eskimo-lightbox">
+                <img src="images/img10.png" alt="" />
+              </a>
+            </div>
+            <!-- GALLERY ITEM 2 -->
+            <div class="eskimo-gallery-item" style="width:55%;height:400px" id="tree">
+            </div>
+        </div>
+		<div class="eskimo-masonry-grid eskimo-gallery">
+			<div class="eskimo-gallery-item" style="width:100%;height:400px" id="bar"></div>
+		</div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer id="eskimo-footer">
+      <div class="container">
+        <!-- CREDITS -->
+        <div class="eskimo-footer-credits">
+          <p>
+            DARSEP
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- GO TO TOP BUTTON -->
+  <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+  <!-- SLIDE PANEL OVERLAY -->
+  <div id="eskimo-overlay"></div>
+  <!-- SLIDE PANEL -->
+
+  <!-- JS FILES -->
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/salvattore.min.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/reading-position-indicator.js"></script>
+  <script src="js/featherlight.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+<script type="text/javascript">
+  // 基于准备好的dom，初始化echarts实例
+  var pic1 = echarts.init(document.getElementById('pic1'));
+  var pic3 = echarts.init(document.getElementById('pic3'));
+  var pic4 = echarts.init(document.getElementById('pic4'));
+  var map1 = echarts.init(document.getElementById('map1'));
+  var map2 = echarts.init(document.getElementById('map2'));
+  var map3 = echarts.init(document.getElementById('map3'));
+  var heatmap = echarts.init(document.getElementById('heatmap'));
+  var tree = echarts.init(document.getElementById('tree'));
+  var bar = echarts.init(document.getElementById('bar'));
+  var option5;
+  var option6;
+  var option7;
+  var option8;
+  var option9;
+  var option10;
+
+  map1.showLoading();
+  map2.showLoading();
+  map3.showLoading();
+  // 指定图表的配置项和数据
+  var option1 = {
+    series: [
+      {
+        type: 'treemap',
+        data: [
+          {
+            name: 'Europe',
+            value: 48.74,
+            label: {
+              show: true, // 显示文字
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Arial, sans-serif',
+              formatter: function (params) {
+                return params.name + ': ' + params.value + '%';
+              }
+            },
+          },
+          {
+            name: 'North America',
+            value: 35.15,
+            label: {
+              show: true, // 显示文字
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Arial, sans-serif',
+              formatter: function (params) {
+                return params.name + ': ' + params.value + '%';
+              }
+            },
+          },
+          {
+            name: 'Asia',
+            value: 10.88,
+            label: {
+              show: true, // 显示文字
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Arial, sans-serif',
+              formatter: function (params) {
+                return params.name + ': ' + params.value + '%';
+              }
+            },
+          },
+          {
+            name: 'South America',
+            value: 2.63,
+            label: {
+              show: true, // 显示文字
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Arial, sans-serif',
+              formatter: function (params) {
+                return params.name + ': ' + params.value + '%';
+              }
+            },
+          },
+          {
+            name: 'Oceania',
+            value: 1.62,
+            label: {
+              show: true, // 显示文字
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Arial, sans-serif',
+              formatter: function (params) {
+                return params.name + ': ' + params.value + '%';
+              }
+            },
+          },
+          {
+            name: 'Africa',
+            value: 1.62,
+            label: {
+              show: true, // 显示文字
+              fontSize: 15,
+              fontWeight: 'bold',
+              fontFamily: 'Arial, sans-serif',
+              formatter: function (params) {
+                console.log(params)
+                return params.name + ': \n' + params.value + '%';
+              }
+            },
+          },
+        ]
+      }
+    ]
+  };
+
+  var option3 = {
+    animationDuration: 10000,
+
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['Africa', 'South America', 'Oceania']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['2020-01', '2020-02', '2020-03', '2020-04', '2020-05', '2020-06', '2020-07', '2020-08', '2020-09', '2020-10', '2020-11', '2020-12', '2021-01', '2021-02', '2021-03', '2021-04', '2021-05', '2021-06', '2021-07', '2021-08', '2021-09', '2021-10', '2021-11', '2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07', '2022-08', '2022-09', '2022-10', '2022-11', '2022-12', '2023-01', '2023-02', '2023-03', '2023-04', '2023-05', '2023-06', '2023-07', '2023-08']
+    },
+    yAxis: {
+      type: 'value'
+    },
+
+    series: [
+      {
+        name: 'Africa',
+        type: 'line',
+        showSymbol: false,
+        color: '#516b91',
+        labelLayout: {
+          moveOverlap: 'shiftY'
+        },
+        emphasis: {
+          focus: 'series'
+        },
+
+        data: [26, 16, 561, 942, 1561, 1598, 2615, 1452, 1235, 1744, 2174, 4239, 6231, 4030, 5534, 3880, 4408, 7790, 11798, 9466, 5484, 2735, 3863, 17199, 9926, 3376, 3125, 4067, 5143, 5879, 3743, 2404, 2444, 2050, 2088, 1110, 2194, 1871, 1432, 1119, 1090, 430, 164, 37]
+      },
+      {
+        name: 'South America',
+        type: 'line',
+        showSymbol: false,
+        color: '#59c4e6',
+        labelLayout: {
+          moveOverlap: 'shiftY'
+        },
+        emphasis: {
+          focus: 'series'
+        },
+
+        data: [2, 11, 1151, 1975, 1405, 1430, 1511, 1688, 1335, 1451, 1950, 2836, 4693, 5563, 9809, 14884, 14667, 18904, 21609, 25004, 23758, 19618, 18162, 19362, 38585, 19741, 9798, 5961, 13732, 21495, 22372, 11484, 4599, 4219, 15465, 17022, 5262, 3581, 3777, 2620, 2441, 1614, 379, 7]
+      },
+      {
+        name: 'Oceania',
+        type: 'line',
+        showSymbol: false,
+        color: '#edafda',
+        labelLayout: {
+          moveOverlap: 'shiftY'
+        },
+        emphasis: {
+          focus: 'series'
+        },
+
+        data: [19, 25, 3047, 1267, 316, 623, 7193, 5825, 1072, 401, 190, 422, 338, 308, 1338, 825, 545, 827, 3736, 7979, 8803, 6982, 5948, 13112, 13420, 10118, 14722, 13219, 14631, 12584, 14124, 13229, 8654, 11114, 14363, 9976, 6726, 3586, 5990, 6588, 7247, 3598, 1638, 119]
+      },
+
+    ]
+  };
+
+  var option4 = {
+    animationDuration: 10000,
+
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      data: ['Europe', 'Asia', 'North America']
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    toolbox: {
+      feature: {
+        saveAsImage: {}
+      }
+    },
+    xAxis: {
+      type: 'category',
+      boundaryGap: false,
+      data: ['2020-01', '2020-02', '2020-03', '2020-04', '2020-05', '2020-06', '2020-07', '2020-08', '2020-09', '2020-10', '2020-11', '2020-12', '2021-01', '2021-02', '2021-03', '2021-04', '2021-05', '2021-06', '2021-07', '2021-08', '2021-09', '2021-10', '2021-11', '2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2022-07', '2022-08', '2022-09', '2022-10', '2022-11', '2022-12', '2023-01', '2023-02', '2023-03', '2023-04', '2023-05', '2023-06', '2023-07', '2023-08']
+    },
+    yAxis: {
+      type: 'value'
+    },
+
+    series: [
+      {
+        name: 'Europe',
+        type: 'line',
+        showSymbol: false,
+        color: '#2ec7c9',
+        labelLayout: {
+          moveOverlap: 'shiftY'
+        },
+        emphasis: {
+          focus: 'series'
+        },
+
+        data: [164, 592, 31855, 30914, 10482, 12445, 6460, 15500, 28202, 53160, 64178, 83121, 144642, 177562, 257631, 206940, 186109, 168648, 292447, 356263, 330800, 361273, 501117, 596655, 659279, 579457, 614755, 294408, 170867, 209267, 208160, 143643, 134179, 146786, 113710, 131950, 82709, 69744, 72090, 36589, 22631, 9743, 5847, 648]
+      },
+      {
+        name: 'Asia',
+        type: 'line',
+        showSymbol: false,
+        color: '#ffb980',
+        labelLayout: {
+          moveOverlap: 'shiftY'
+        },
+        emphasis: {
+          focus: 'series'
+        },
+
+        data: [616, 1144, 3711, 5893, 4704, 4175, 6092, 7273, 3692, 3937, 7011, 13499, 20501, 17044, 26269, 43719, 43356, 35227, 60453, 136672, 55537, 33091, 35280, 57791, 129343, 80438, 61391, 56245, 56039, 68920, 118803, 80141, 53933, 46763, 61363, 68300, 47026, 26065, 29914, 32570, 29271, 20743, 12611, 710]
+      },
+      {
+        name: 'North America',
+        type: 'line',
+        showSymbol: false,
+        color: '#97b552',
+        labelLayout: {
+          moveOverlap: 'shiftY'
+        },
+        emphasis: {
+          focus: 'series'
+        },
+
+        data: [150, 205, 19913, 22515, 15148, 17534, 24934, 17851, 19345, 30109, 46365, 62872, 100983, 98156, 160550, 204140, 118020, 72014, 209709, 375488, 326060, 274727, 296347, 418583, 514352, 255105, 114360, 166708, 220339, 202574, 218349, 173637, 123652, 97499, 111156, 126277, 96782, 68554, 56214, 36670, 25978, 15099, 13786, 1504]
+      },
+
+    ]
+  };
+  
+  $.get(
+  'https://img.hcharts.cn/mapdata/custom/asia.geo.json',
+  function (asiaJson) {
+    map1.hideLoading();
+    echarts.registerMap('USA', asiaJson);
+    option5 = {
+      title: {
+        left: 'right'
+      },
+      tooltip: {
+        trigger: 'item',
+        showDelay: 0,
+        transitionDuration: 0.2,
+        formatter: function (params) {
+          return params.name + ': ' + params.value + '%';
+        }
+      },
+      visualMap: {
+        left: 'right',
+        min: 0,
+        max: 36,
+        inRange: {
+          color: [
+            '#e0f3f8',
+            '#ffffbf',
+            '#fee090',
+            '#fdae61',
+            '#f46d43',
+            '#d73027',
+            '#a50026'
+          ]
+        },
+        text: ['High', 'Low'],
+        calculable: true
+      },
+      toolbox: {
+        show: true,
+        left: 'left',
+        top: 'top',
+        feature: {
+          dataView: { readOnly: false },
+          restore: {},
+          saveAsImage: {}
+        }
+      },
+      series: [
+        {
+          type: 'map',
+          roam: true,
+          map: 'USA',
+          data: [
+            { name: 'Japan', value: 35.67 },
+            { name: 'India', value: 19.94 },
+            { name: 'South Korea', value: 9.6 },
+            { name: 'Turkey', value: 5.86 },
+            { name: 'China', value: 4.49 },
+            { name: 'Indonesia', value: 3.03 },
+            { name: 'Thailand', value: 2.4 },
+            { name: 'Philippines', value: 1.64 },
+            { name: 'Vietnam', value: 0.57 },
+            { name: 'Pakistan', value: 0.39 },
+            { name: 'Iran', value: 0.28 },
+            { name: 'Kazakhstan', value: 0.16 },
+            { name: 'Saudi Arabia', value: 0.15 }
+          ]
+        }
+      ]
+    };
+    map1.setOption(option5);
+  }
+);
+  
+  $.get(
+  'https://img.hcharts.cn/mapdata/custom/north-america.geo.json',
+  function (asiaJson) {
+    map2.hideLoading();
+    echarts.registerMap('USA', asiaJson);
+    option6 = {
+      title: {
+        left: 'right'
+      },
+      tooltip: {
+        trigger: 'item',
+        showDelay: 0,
+        transitionDuration: 0.2,
+        formatter: function (params) {
+          return params.name + ': ' + params.value + '%';
+        }
+      },
+      visualMap: {
+        left: 'right',
+        min: 0,
+        max: 90,
+        inRange: {
+          color: [
+            '#e0f3f8',
+            '#ffffbf',
+            '#fee090',
+            '#fdae61',
+            '#f46d43',
+            '#d73027',
+            '#a50026'
+          ]
+        },
+        text: ['High', 'Low'],
+        calculable: true
+      },
+      toolbox: {
+        show: true,
+        left: 'left',
+        top: 'top',
+        feature: {
+          dataView: { readOnly: false },
+          restore: {},
+          saveAsImage: {}
+        }
+      },
+      series: [
+        {
+          type: 'map',
+          roam: true,
+          map: 'USA',
+          data: [
+            { name: 'United States of America', value: 87.15 },
+            { name: 'Canada', value: 10.02 },
+            { name: 'Mexico', value: 1.59 },
+            { name: 'Cuba', value: 0.02 },
+            { name: 'China', value: 4.49 },
+            { name: 'Indonesia', value: 3.03 },
+
+          ]
+        }
+      ]
+    };
+    map2.setOption(option6);
+  }
+);
+
+$.get(
+  'https://img.hcharts.cn/mapdata/custom/europe.geo.json',
+  function (asiaJson) {
+    map3.hideLoading();
+    echarts.registerMap('USA', asiaJson);
+    option7 = {
+      title: {
+        left: 'right'
+      },
+      tooltip: {
+        trigger: 'item',
+        showDelay: 0,
+        transitionDuration: 0.2,
+        formatter: function (params) {
+          return params.name + ': ' + params.value + '%';
+        }
+      },
+      visualMap: {
+        left: 'right',
+        min: 0,
+        max: 41,
+        inRange: {
+          color: [
+            '#e0f3f8',
+            '#ffffbf',
+            '#fee090',
+            '#fdae61',
+            '#f46d43',
+            '#d73027',
+            '#a50026'
+          ]
+        },
+        text: ['High', 'Low'],
+        calculable: true
+      },
+      toolbox: {
+        show: true,
+        left: 'left',
+        top: 'top',
+        feature: {
+          dataView: { readOnly: false },
+          restore: {},
+          saveAsImage: {}
+        }
+      },
+      series: [
+        {
+          type: 'map',
+          roam: true,
+          map: 'USA',
+          data: [
+            { name: 'United Kingdom', value: 40.56 },
+            { name: 'Germany', value: 12.06 },
+            { name: 'Denmark', value: 8.22 },
+            { name: 'France', value: 8.06 },
+            { name: 'Austria', value: 3.5 },
+            { name: 'Sweden', value: 3.37 },
+			{ name: 'Spain', value: 2.97 },
+			{ name: 'Italy', value: 2.4 },
+			{ name: 'Belgium', value: 2.3 },
+			{ name: 'Poland', value: 1.19 },
+          ]
+        }
+      ]
+    };
+    map3.setOption(option7);
+  }
+);
+
+const hours = ['L18F','T19I','T19R','T20N','P26S','G75V','T76I','D80A','T95I','D138Y','G142D','Y144S','Y145N','R190S','V213G','D215G','G339D','R346K',
+'S371F','S373P','S375F','T376A','D405N','R408S','K417T','K417N','N440K','L452Q','L452R','S477N','T478K','E484K','E484A','F486V','F490S','Q493R','G496S',
+'Q498R','N501Y','Y505H','A570D','D614G','H655Y','N679K','P681H','P681R','A701V','T716I','N764K','D796Y','N856K','T859N','D950N','Q954H','N969K','L981F',
+'S982A','T1027I','D1118H','V1176F'];
+// prettier-ignore
+const days = ['Alpha','Beta','Delta','Gamma','Lambda','Mu','Omicron'];
+// prettier-ignore
+const data = [[1,0,0.47],[1,7,0.97],[1,15,0.95],[2,2,0.98],[2,8,0.44],[2,10,0.79],[2,28,0.99],[3,0,0.97],[3,3,0.97],[3,4,0.97],[3,9,0.92],
+			  [3,13,0.96],[3,24,0.93],[4,5,0.85],[4,6,0.87],[4,27,0.88],[5,8,0.94],[5,11,0.8],[5,12,0.85],[5,17,0.95],[6,1,0.68],[6,8,0.26],
+			  [6,10,0.68],[6,14,0.68],[6,16,0.95],[6,17,0.16],[6,18,0.94],[6,19,0.95],[6,20,0.95],[6,21,0.69],[6,22,0.69],[6,23,0.67],[6,25,0.92],
+			  [6,26,0.9],[6,28,0.35],[6,29,0.95],[0,38,0.99],[0,40,0.99],[0,41,0.99],[0,44,0.99],[0,47,0.99],[0,56,0.99],[0,58,0.99],[1,31,0.96],
+			  [1,38,0.97],[1,41,0.98],[1,46,0.98],[2,30,0.98],[2,41,0.98],[2,45,0.98],[3,31,0.97],[3,38,0.97],[3,41,0.97],[3,42,0.97],[3,57,0.97],
+			  [3,59,0.97],[4,34,0.88],[4,41,0.88],[4,51,0.88],[5,31,0.95],[5,38,0.95],[5,41,0.95],[5,44,0.95],[5,52,0.87],[6,30,0.95],[6,32,0.95],
+			  [6,33,0.35],[6,35,0.58],[6,36,0.26],[6,37,0.95],[6,38,0.95],[6,39,0.95],[6,41,0.95],[6,42,0.95],[6,43,0.95],[6,44,0.95],[6,48,0.94],
+			  [6,49,0.95],[6,50,0.26],[6,53,0.95],[6,54,0.95],[6,55,0.26]
+			 ]
+    .map(function (item) {
+    return [item[1], item[0], item[2] || '-'];
+});
+option8 = {
+  tooltip: {
+    position: 'top'
+  },
+  grid: {
+    height: '50%',
+    top: '10%'
+  },
+  xAxis: {
+    type: 'category',
+    data: hours,
+    splitArea: {
+      show: true
+    }
+  },
+  yAxis: {
+    type: 'category',
+    data: days,
+    splitArea: {
+      show: true
+    }
+  },
+  visualMap: {
+    min: 0,
+    max: 1,
+    calculable: true,
+    orient: 'horizontal',
+    left: 'center',
+    bottom: '15%'
+  },
+  series: [
+    {
+      
+      type: 'heatmap',
+      data: data,
+      label: {
+        show: false
+      },
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+};
+
+option9 = {
+		
+            series: {
+                type: 'tree',
+                data: [
+                    {
+                        name: 'B',
+                        children: [
+                            { name: 'A'},
+                            { name: 'B.1',
+							  children: [
+								{name: 'B.1.519',
+								 children: [
+								   {name: 'Lambda(C.37)'},
+								   {name: 'Omicron',
+								    children: [
+									  {name: 'BA.2',
+										children: [
+										  {name: 'BA.5',
+										    children: [
+											  {name: 'BQ.1'},
+											],
+										  },
+										  {name: 'BQ.1'},
+										  {name: 'BA.2.12.1'},
+										  {name: 'BA.4'},
+										  {name: 'BA.2.75',
+										     children: [
+											   {name: 'CH.1.1'},
+											 ],
+										  },
+										  {name: 'XBB',
+										    children: [
+											  {name: 'XBB.1.5',
+											    children: [
+												  {name: 'XBB.1.9',
+												    children: [
+													  {name: 'EG.5.1'},
+													],
+												  },
+												],
+											  },
+											  {name: 'XBB.2.3'},
+											],
+										  },
+										],
+									  },
+									  {name: 'BA.1'},
+									],							
+								   },
+								 ],
+								},
+							    {name: 'Alpha(B.1.1.7)'},
+								{name: 'D.2'},
+								{name: 'Mu(B.1.621)'},
+								{name: 'Delta(B.1.617.2)'},
+								{name: 'Kappa(B.1.617.1)'},
+								{name: 'Eta(B.1.525)'},
+								{name: 'Beta(B.1.351)'},
+								{name: 'Iota(B.1.526)'},
+								{name: 'B.1.2'},
+								{name: 'Epsilon(B.1.429)'},
+								{name: 'Gamma(P.1)'},
+								{name: 'Theta(P.3)'},
+							  ],
+							
+						    },
+                        ],
+                    },
+         
+                ],
+				top: '1%',
+          
+          bottom: '1%',
+          right: '20%',
+          symbolSize: 7,
+          label: {
+            position: 'left',
+            verticalAlign: 'middle',
+            align: 'right',
+            fontSize: 15
+          },
+          leaves: {
+            label: {
+              position: 'right',
+              verticalAlign: 'middle',
+              align: 'left'
+            }
+          },
+          emphasis: {
+            focus: 'descendant'
+          },
+          expandAndCollapse: true,
+          animationDuration: 550,
+          animationDurationUpdate: 750
+            }
+        };
+option10 = {
+            
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
+    
+            },
+            legend: {
+                data: ['B','A','B.1','B.1.519','B.1.499','B.1.1.1','B.1.177','B.1.2','Alpha','Mu','Delta','Kappa','Eta','Beta','Iota','Epsilon',
+                       'Gamma','Lambda','Theta','BA.1','BA.2','BA.4','BA.5','BA.2.12.1','BA.2.75','BQ.1','XBB','XBB.1.5','XBB.1.16','XBB.1.9',
+                       'CH.1.1','XBB.2.3','EG.5.1']
+				
+            },
+            grid: {
+				top: '30%',
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                data: ['2020-01','2020-02','2020-03','2020-04','2020-05','2020-06','2020-07','2020-08','2020-09','2020-10','2020-11','2020-12',
+                       '2021-01','2021-02','2021-03','2021-04','2021-05','2021-06','2021-07','2021-08','2021-09','2021-10','2021-11','2021-12',
+                       '2022-01','2022-02','2022-03','2022-04','2022-05','2022-06','2022-07','2022-08','2022-09','2022-10','2022-11','2022-12',
+                       '2023-01','2023-02','2023-03','2023-04','2023-05','2023-06','2023-07','2023-08','2023-09']
+            },
+            yAxis: {
+                type: 'value'
+            },
+			
+            series: [
+			     
+				
+                {
+                    name: 'B',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [40,40,22,17,7,3,1,2,2,1,1,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+                {
+                    name: 'A',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [60,16,11,8,5,4,2,2,2,2,5,5,1,2,1,2,2,1,1,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+                {
+                    name: 'B.1',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,18,31,35,29,34,39,35,40,36,34,35,22,14,12,6,6,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'B.1.519',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,15,16,26,41,41,47,49,41,44,38,33,30,24,13,10,10,3,1,0.75,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0]
+                },
+				{
+                    name: 'B.1.499',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,10,18,13,16,13,10,6,6,8,7,1,3,3,2,0.6,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'B.1.1.1',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,1,2,1,2,5,1,2,1,0.5,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'B.1.177',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,2,5,5,4,5,7,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'B.1.2',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,2,1,3,3,1,0.6,0.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Alpha',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0.5,2,8,22,34,39,36,27,12,4,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Mu',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,1,2,3,0.75,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Delta',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0.4,3,3,4,9,25,38,68,82,90,96,97,86,29,9,5,0.8,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Kappa',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0.4,2,0.8,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Eta',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0.3,0.6,0.6,2,5,2,1,0.6,2,0.75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Beta',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,2,0,3,3,4,6,9,11,7,0.8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Iota',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Epsilon',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,2,3,3,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Gamma',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0.3,0.6,0.8,2,4,3,5,8,7,5,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Lambda',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'Theta',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,1,0.3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'BA.1',
+                    type: 'bar',
+                    stack: '总量',
+					color: '#5B6E96',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,12,57,56,41,21,4,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'BA.2',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,14,35,54,77,84,66,38,13,4,0,0,1,3,2,1,2,1,0,0,0,1,7]
+                },
+				{
+                    name: 'BA.4',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,8,10,11,8,5,4,2,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'BA.5',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,5,13,40,66,69,63,55,52,44,36,33,24,8,5,1,0,0,0]
+                },
+				{
+                    name: 'BA.2.12.1',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.6,3,11,9,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+                },
+				{
+                    name: 'BA.2.75',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,9,17,14,10,8,9,13,9,4,3,4,4,0,0,0]
+                },
+				{
+                    name: 'BQ.1',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,9,20,22,27,19,8,4,1,0,0,0,1,0]
+                },
+				{
+                    name: 'XBB',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,6,8,6,5,5,2,2,2,0,0,0,2,0]
+                },
+				{
+                    name: 'XBB.1.5',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,7,9,18,31,30,37,37,29,22,16,8]
+                },
+				{
+                    name: 'XBB.1.16',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,14,20,23,29,27,18,13]
+                },
+				{
+                    name: 'XBB.1.9',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,9,14,19,23,20,18,12,12]
+                },
+				{
+                    name: 'CH.1.1',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,3,4,3,2,3,0,0,0,0,0]
+                },
+				{
+                    name: 'XBB.2.3',
+                    type: 'bar',
+                    stack: '总量',
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,4,4,6,3,10,19,12]
+                },
+				{
+                    name: 'EG.5.1',
+                    type: 'bar',
+                    stack: '总量',
+					
+                    data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,12,23,31,48]
+                },
+            ]
+        };
+
+  // 使用刚指定的配置项和数据显示图表。
+  pic1.setOption(option1);
+  pic3.setOption(option3);
+  pic4.setOption(option4);
+  heatmap.setOption(option8);
+  tree.setOption(option9);
+  bar.setOption(option10);
+</script>
+
+</html>

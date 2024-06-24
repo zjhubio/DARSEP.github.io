@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>DARSEP</title>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/fontawesome.css" rel="stylesheet" type="text/css">
+    <link href="css/featherlight.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- SITE WRAPPER -->
+    <div id="eskimo-site-wrapper">
+        <!-- MAIN CONTAINER -->
+        <main id="eskimo-main-container">
+            <div class="container">
+                <!-- SIDEBAR -->
+                <div id="eskimo-sidebar">
+                    <div id="eskimo-sidebar-wrapper" class="d-flex align-items-start flex-column h-100 w-100">
+                        <!-- LOGO -->
+                        <div id="eskimo-logo-cell" class="w-100">
+                            <a class="eskimo-logo-link" href="index.html">
+                                <img src="images/logo.png" class="eskimo-logo" alt="eskimo" />
+                            </a>
+                        </div>
+                        <!-- MENU CONTAINER -->
+                        <div id="eskimo-sidebar-cell" class="w-100">
+                            <!-- MOBILE MENU BUTTON -->
+                            <div id="eskimo-menu-toggle">MENU</div>
+                            <!-- MENU -->
+                            <nav id="eskimo-main-menu" class="menu-main-menu-container">
+                                <ul class="eskimo-menu-ul">
+                                    <li><a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="./data.html">Data Analysis</a>
+                                    </li>
+                                    <li><a href="#">Model Analysis</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="fitness.html">Fitness</a></li>
+                                            <li><a href="model.html">Model</a></li>                                       
+                                        </ul>
+                                    </li>
+									<li><a href="downstream.html">DOWNSTREAM Analysis</a></li>
+									<li><a href="install.html">Local Installation & Usage</a></li>
+                                    <li><a href="contactus.html">Contact Us</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+
+                <h2>Local Installation & Usage</h2>
+                <p style="text-align: justify;">In order to maximise the user experience, we have prepared a convenient local installation package with a detailed installation and operation guide to ensure that users can easily complete the installation and get started immediately. The following content will guide you through the entire process.</p>
+				<h5>Pre-installation Preparation</h5>
+				<ul>
+					<li>First of all, please prepare a pristine python environment.</li>
+					<li>Before installing this package, please follow the requirements.txt file in <a href="https://github.com/zjhubio/DARSEP">Github</a> to install the necessary project dependencies.</li>
+				</ul>
+				<h5>Installation</h5>
+				<div>Use the following command to install the DARSEP tool:</div>
+				<code> pip install DARSEP -i https://pypi.python.org/simple</code>
+				<p></p>
+				<h5>Usage</h5>
+				<p style="text-align: justify;">After installing the tool, you can call the method directly in the code, there are two interfaces, DARSEP-SPRLM and DARSEP-PMLM, the following describes the usage of these two interfaces:</p>
+				<div>The first thing you can do is to import the DARSEP package directly:</div>
+				<code> import DARSEP</code>
+				<p></p>
+				<ul>
+					<li>DARSEP-SPRLM</li>
+					<div style="text-align: justify;">The DARSEP-SPRLM method aims to optimise the sequences using reinforcement learning, after running it will get the optimised sequences as well as the values of the predicted fitness, which will be saved to a csv file, which can be implemented by running the following code:</div>
+					<code>from DARSEP import DARSEP_SPRLM</code><br>
+					<code>DARSEP_SPRLM.selfPlay()</code>
+					<p></p>
+					<li>DARSEP-PMLM</li>
+					<div style="text-align: justify;">DARSEP-PMLM is designed to provide an interface to downstream task analysis methods for SRAS-CoV-2 spike protein sequences, and is used as described below:</div>
+					<div style="text-align: justify;">1. Clustering analysis: Users can cluster the customised SRAS-CoV-2 sequences by calling the method, though it may take some time, using the following method:</div>
+					<code>from DARSEP import DARSEP_PMLM</code><br>
+					<code>DARSEP_SPRLM.Cluster(fasta_file)</code>
+					<div>where fasta_file is the path to the fasta file.</div>
+					<p></p>
+					<div style="text-align: justify;">2. Evolutionary field construction: The user can construct the vector field of the virus sequence by calling the method as follows:</div>
+					<code>from DARSEP import DARSEP_PMLM</code><br>
+					<code>DARSEP_SPRLM.evo(fasta_file)</code>
+					<div>where fasta_file is the path to the fasta file.</div>
+					<p></p>
+					<div style="text-align: justify;">3. Missense Mutation Analysis: Users can call the method to perform missense mutation analysis on wild-type sequences as follows:</div>
+					<code>from DARSEP import DARSEP_PMLM</code><br>
+					<code>DARSEP_SPRLM.MissenseAnalysis()</code>
+					<p></p>
+					<div style="text-align: justify;">4. Grammatical semantic analysis: Users can analyse the changes in the semantic syntax of a particular SRAS-CoV-2 according to its mutation site invocation method as follows:</div>
+					<code>from DARSEP import DARSEP_PMLM</code><br>
+					<code>DARSEP_SPRLM.vocs(mutations)</code>
+					<div>Suggested input format for mutations: ['G339D','S371L','S373P','S375F','K417N','N440K','G446S','S477N','T478K','E484A','Q493R','G496S','Q498R','N501Y','Y505H']</div>
+				</ul>
+				
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <footer id="eskimo-footer">
+          
+                <!-- CREDITS -->
+                <div class="eskimo-footer-credits">
+                    <p>
+                        DARSEP
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- GO TO TOP BUTTON -->
+    <a id="eskimo-gototop" href="#"><i class="fa fa-chevron-up"></i></a>
+    <!-- SLIDE PANEL OVERLAY -->
+    <div id="eskimo-overlay"></div>
+    
+
+    <!-- JS FILES -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/salvattore.min.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/reading-position-indicator.js"></script>
+    <script src="js/featherlight.js"></script>
+    <script src="js/ajax-contact-form.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
