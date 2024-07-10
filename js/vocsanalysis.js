@@ -11,8 +11,8 @@ async function vocsanalysis(){
 		var img3 = "./images/11.png";
 		var img4 = "./images/12.png";
 		var img5 = "./images/13.png";
-		alert("The request has been sent, please wait！")
-		await sleep(10000);
+		alert("The task has been submitted. Please wait a moment...")
+		await sleep(5000);
 
 		document.getElementById('img6').src = img3;
 		document.getElementById('annotation6').innerHTML = "The mutation location of the RBD region of the Omicron variable strain BA.1.";
@@ -33,8 +33,8 @@ async function vocsanalysis(){
 		var img3 = "./images/14.png";
 		var img4 = "./images/15.png";
 		var img5 = "./images/16.png";
-		alert("The request has been sent, please wait！")
-		await sleep(10000);
+		alert("The task has been submitted. Please wait a moment...")
+		await sleep(5000);
 
 		document.getElementById('img6').src = img3;
 		document.getElementById('annotation6').innerHTML = "The mutation location of the RBD region of the OMICRON variable strain EG.5.";
