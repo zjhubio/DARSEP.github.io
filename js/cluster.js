@@ -9,8 +9,8 @@ async function cluster(){
 	if(selectedValue == 1){
 		var img1 = "./images/1.png";
 		var img2 = "./images/2.png";
-		alert("The request has been sent, please wait！")
-		await sleep(1000);
+		alert("The task has been submitted. Please wait a moment...")
+		await sleep(5000);
 	
 		document.getElementById('img1').src = img1;
 		document.getElementById('annotation1').innerHTML = "Semantic embedding clustering plot for the training sequence dataset";
@@ -26,8 +26,8 @@ async function cluster(){
 	if(selectedValue == 2){
 		var img3 = "./images/3.png";
 		var img4 = "./images/4.png";
-		alert("The request has been sent, please wait！")
-		await sleep(1000);
+		alert("The task has been submitted. Please wait a moment...")
+		await sleep(5000);
 		
 		document.getElementById('img1').src = img3;
 		document.getElementById('annotation1').innerHTML = "Semantic embedding clustering plot for the training vs. optimised dataset";
