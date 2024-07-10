@@ -11,8 +11,8 @@ async function evo(){
 		var img3 = "./images/5.png";
 		var img4 = "./images/6.png";
 		var img5 = "./images/7.png";
-		alert("The request has been sent, please wait！")
-		await sleep(10000);
+		alert("The task has been submitted. Please wait a moment...")
+		await sleep(5000);
 		
 		document.getElementById('img3').src = img3;
 		document.getElementById('annotation3').innerHTML = "Flow chart of RBD sequence evolution for 2019-2023";
@@ -35,8 +35,8 @@ async function evo(){
 		var img3 = "./images/8.png";
 		var img4 = "./images/9.png";
 		var img5 = "./images/10.png";
-		alert("The request has been sent, please wait！")
-		await sleep(10000);
+		alert("The task has been submitted. Please wait a moment...！")
+		await sleep(5000);
 
 		document.getElementById('img3').src = img3;
 		document.getElementById('annotation3').innerHTML = "Flow chart of RBD sequence evolution for the total sequence set (2019-2023 and post-optimisation)";
