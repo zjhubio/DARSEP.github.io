@@ -120,7 +120,7 @@
                     <!-- TAB 1 -->
                     <div class="tab-pane fade active show" id="mp-tab-1" role="button" aria-expanded="true">
                         <h3>Fitness Calculation</h3>
-                        <p style="text-align:justify">Enter the RBD amino acid sequence in the input box below and calculate the sequence fitness.The data in the text box is sample data. Please input the <b>RBD sequence</b> according to the length of the sample data.The RBD sequence is an amino acid sequence that starts with "RVQ" and ends with "CVNF".</p>
+                        <p style="text-align:justify">Enter the RBD amino acid sequence in the input box below and calculate the sequence fitness.The data in the text box is sample data. Please input the <b>RBD sequence</b> according to the format of the sample data.The RBD sequence is an amino acid sequence that starts with "RVQ" and ends with "CVNF".</p>
 						<p><textarea id="rbdsequence" name="rbdsequence" cols="45" rows="8" required="required"></textarea></p>
 						<input type="submit" value="Submit" onclick='calculateFitness()'/>
 						<input type="submit" value="clear " onclick='cleartext()'/>
@@ -138,10 +138,10 @@
                         <h3>Clustering Analysis</h3>
                         <p style="text-align:justify">Cluster analysis is performed based on the dataset provided in the drop-down box.The input file type is in. fasta format, where the download address for training dataset is as follows, and the download address for the collection of training dataset and optimized dataset is as follows. If you have your own dataset that you want to analyze, please contact us according to the contact information on the contact us page.<b>If the result image does not display properly, please try clearing the browser cache.</b></p>
                         <p>training dataset download: https://drive.google.com/file/d/18b7aQTSgrO9a9rjFTrTHBjmUY8-sOWwH/view?usp=sharing</p>
-						<p>training and optimised  dataset download: https://drive.google.com/file/d/1MfqtXk6lT1EEzqRsyAKWXHyaPdRC_cdg/view?usp=drive_link</p>
+						<p>training and optimized  dataset download: https://drive.google.com/file/d/1MfqtXk6lT1EEzqRsyAKWXHyaPdRC_cdg/view?usp=drive_link</p>
 						<select id="trainingset">
 							<option value="1">training dataset</option>
-							<option value="2">training dataset+optimised dataset</option>
+							<option value="2">training dataset+optimized dataset</option>
 						</select>
 						<div style="margin-top:3%">
 							<input type="submit" value="Submit" onclick='cluster()'/>
@@ -160,10 +160,10 @@
                         <h3>Constructing Evolutionary Fields</h3>
                         <p style="text-align:justify">Constructing Evolutionary Fields are performed based on the dataset provided in the drop-down box.The input file type is in. fasta format, where the download address for training dataset is as follows, and the download address for the collection of training dataset and optimized dataset is as follows. If you have your own dataset that you want to analyze, please contact us according to the contact information on the contact us page.<b>If the result image does not display properly, please try clearing the browser cache.</b></p>
                         <p>training dataset download: https://drive.google.com/file/d/18b7aQTSgrO9a9rjFTrTHBjmUY8-sOWwH/view?usp=sharing</p>
-						<p>training and optimised  dataset download: https://drive.google.com/file/d/1MfqtXk6lT1EEzqRsyAKWXHyaPdRC_cdg/view?usp=drive_link</p>
+						<p>training and optimized  dataset download: https://drive.google.com/file/d/1MfqtXk6lT1EEzqRsyAKWXHyaPdRC_cdg/view?usp=drive_link</p>
 						<select id="trainingdataset">
 							<option value="3">training dataset</option>
-							<option value="4">training dataset+optimised dataset</option>
+							<option value="4">training dataset+optimized dataset</option>
 						</select>
 						<div style="margin-top:3%">
 							<input type="submit" value="Submit" onclick='evo()'/>
